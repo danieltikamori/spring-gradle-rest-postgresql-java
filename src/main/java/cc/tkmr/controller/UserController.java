@@ -16,7 +16,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @CrossOrigin
 @RestController
@@ -31,7 +30,7 @@ public record UserController(UserService userService) {
     })
     public ResponseEntity<List<UserDto>> findAll() {
         var users = userService.findAll();
-        var usersDto = users.stream().map(UserDto::new).collect(Collectors.toList());
+        var usersDto = users.stream().map(UserDto::new).toList();
         return ResponseEntity.ok(usersDto);
     }
 
