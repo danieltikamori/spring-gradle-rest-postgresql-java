@@ -15,4 +15,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
     boolean existsByAccountNumber(String number);
 
     boolean existsByCardNumber(String number);
+
+    Object update(Long any, User any1);
+
+    Object create(User any);
 }

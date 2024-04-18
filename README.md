@@ -66,3 +66,30 @@ For those interested in developing the Santander home screen (Figma) in Angular,
 - Production URL: https://sdw-2023-prd.up.railway.app/users/1
 - Mock (Backup): https://digitalinnovationone.github.io/santander-dev-week-2023-api/mocks/find_one.json
 
+## Setup
+
+Add environment variable to run in development mode:
+
+In Run / Debug configurations, in the [Edit configurations] option, add in environment variables:
+
+`SPRING_PROFILES_ACTIVE=dev`
+
+### Testing
+
+Run the application in development mode, open the browser:
+
+http://localhost:8080/h2-console
+
+Use:
+
+    url: jdbc:h2:mem:sdw2023
+    username: sdw2023
+    password:
+
+Test the connection, then connect to the database.
+
+
+
+
+
+
